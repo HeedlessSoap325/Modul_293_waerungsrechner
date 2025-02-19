@@ -2,11 +2,10 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Name from "./components/Name.jsx";
 
-function App() {
+export default function App() {
   const [count, setCount] = useState(0);
-
-  console.log("Test123");
 
   return (
     <>
@@ -20,12 +19,11 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          This Button has been clicked {count} time(s)
-        </button>
+          <button onClick={() => setCount((count) => count + 1)}>
+              This Button has been clicked {count} time(s)
+          </button>
+          <Name />
       </div>
     </>
   )
 }
-
-export default App
